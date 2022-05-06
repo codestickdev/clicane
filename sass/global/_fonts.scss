@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Lato';
+    font-weight: 400;
+    src: url('/wp-content/themes/clicane/fonts/Lato/Lato-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lato';
+    font-weight: 500;
+    src: url('/wp-content/themes/clicane/fonts/Lato/Lato-Regular.ttf') format('truetype');
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}

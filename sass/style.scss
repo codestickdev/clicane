@@ -1,102 +1,158 @@
-/*!
-Theme Name: Clicane
-Theme URI: http://underscores.me/
-Author: Codestick
-Author URI: https://codestick.pl/
-Description: Description
-Version: 1.0.0
-Tested up to: 5.4
-Requires PHP: 5.6
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: clicane
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+/**
+ *	Global
+ */
+@use 'global/grid';
+@use 'global/fonts';
+@use 'global/variables' as v;
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
+/**
+ *	Partials
+ */
+@use 'partials/siteHeader';
+@use 'partials/siteFooter';
 
-Clicane is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
+/**
+ *	Pages
+ */
+@use 'pages/home';
 
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
+a{
+	text-decoration: none !important;
+	outline: none !important;
+	transition: ease .3s;
+}
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Generic
-	- Normalize
-	- Box sizing
-# Base
-	- Typography
-	- Elements
-	- Links
-	- Forms
-## Layouts
-# Components
-	- Navigation
-	- Posts and pages
-	- Comments
-	- Widgets
-	- Media
-	- Captions
-	- Galleries
-# plugins
-	- Jetpack infinite scroll
-# Utilities
-	- Accessibility
-	- Alignments
+.btn{
+	background-color: v.$yellow;
+	padding: 0 25px;
+	min-height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: fit-content;
+	max-width: -moz-max-content;
+	max-width: -webkit-fit-content;
+	transition: ease .3s;
 
---------------------------------------------------------------*/
+	span{
+		font-size: 30px;
+		line-height: 1;
+		font-weight: 500;
+		color: #fff;
+		padding-right: 40px;
+		position: relative;
+		top: -2px;
 
-// Import variables and mixins.
-@import "abstracts/abstracts";
+		&:after{
+			content: '';
+			background-image: url('/wp-content/themes/clicane/images/btn_arrow.svg');
+			background-repeat: no-repeat;
+			background-size: 14px;
+			width: 14px;
+			height: 24px;
+			position: absolute;
+			right: 0;
+			top: 55%;
+			transform: translate(0, -50%);
+			transition: ease .3s;
+		}
+	}
 
-/*--------------------------------------------------------------
-# Generic
---------------------------------------------------------------*/
+	&:hover{
+		background-color: v.$yellow_hover;
 
-/* Normalize
---------------------------------------------- */
-@import "generic/normalize";
+		span{
+			&:after{
+				right: -8px;
+			}
+		}
+	}
+}
+@media (max-width: 991px){
+	.btn{
+		min-height: 50px;
 
-/* Box sizing
---------------------------------------------- */
-@import "generic/box-sizing";
+		span{
+			font-size: 21px;
+			padding-right: 25px;
 
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-@import "base/base";
+			&:after{
+				background-size: 10px;
+				width: 10px;
+				height: 17px;
+			}
+		}
+	}
+}
 
-/*--------------------------------------------------------------
-# Layouts
---------------------------------------------------------------*/
-// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
-// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
+.sectionHeading{
+	margin: 0 0 150px;
+	padding: 0 15px;
 
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-@import "components/components";
+	&__title{
+		display: block;
+		font-size: 60px;
+		line-height: 1;
+		color: #fff;
+		margin: 0 auto 70px;
+		padding: 21px 45px 30px;
+		background-color: v.$navy;
+		max-width: fit-content;
+		max-width: -moz-max-content;
+		max-width: -webkit-fit-content;
+		transform: rotate(-10deg);
+	}
+	p{
+		font-size: 30px;
+		line-height: 45px;
+		font-weight: 500;
+		color: #000;
+		text-align: center;
+		margin: 0;
+	}
+}
+@media (max-width: 1199px){
+	.sectionHeading{
+		margin: 0 0 100px;
 
-/*--------------------------------------------------------------
-# Plugins
---------------------------------------------------------------*/
-
-/* Jetpack infinite scroll
---------------------------------------------- */
-@import "plugins/jetpack/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Utilities
---------------------------------------------------------------*/
-
-/* Accessibility
---------------------------------------------- */
-@import "utilities/accessibility";
-
-/* Alignments
---------------------------------------------- */
-@import "utilities/alignments";
+		&__title{
+			font-size: 40px;
+			padding: 17px 40px 24px;
+			margin: 0 auto 55px;
+		}
+		p{
+			font-size: 24px;
+    		line-height: 35px;
+		}
+	}
+}
+@media (max-width: 767px){
+	.sectionHeading{
+		margin: 0 0 60px;
+		
+		&__title{
+			font-size: 32px;
+			padding: 14px 30px 18px;
+			margin: 0 auto 40px;
+		}
+		p{
+			font-size: 18px;
+    		line-height: 26px;
+		}
+	}
+}
+@media (max-width: 575px){
+	.sectionHeading{
+		margin: 0 0 60px;
+		
+		&__title{
+			font-size: 25px;
+			padding: 10px 20px 14px;
+			margin: 0 auto 25px;
+		}
+		p{
+			font-size: 16px;
+    		line-height: 21px;
+		}
+	}
+}
