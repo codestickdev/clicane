@@ -71,6 +71,61 @@ get_header(); ?>
             <?php endwhile; ?>
         </div>
     </section>
+
+    <section class="homeTools">
+        <div class="homeTools__wrap container">
+            <h2 class="homeTools__heading">W naszej pracy korzystamy z wielu narzędzi:</h2>
+            <div class="homeTools__list">
+                <?php
+                    $elements = 0;
+                    while(have_rows('homeTools')){
+                        the_row(); $elements++;
+                    };
+                ?>
+                <?php $count = 0;
+                while(have_rows('homeTools')): the_row(); $count++; ?>
+                    <?php
+                        $last = false;
+                        if($count == 4 || $count == 8 || $count == 12 || $count == 16 || $count == $elements){
+                            $last = true;
+                        }
+                    ?>
+                    <p class="pos<?php if($last == true){echo ' pos--last';} ?>"><?php echo get_sub_field('homeTools_name'); ?></p>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="homePortfolio">
+        <div class="homePortfolio__wrap container">
+            <div class="sectionHeading">
+                <h2 class="sectionHeading__title">Portfolio</h2>
+                <p>Nasze prezentacje są wyświetlane na wielkich<br/>konferencjach, targach i spotkaniach wewnętrznych.</p>
+            </div>
+            <div class="homePortfolio__list">
+                <?php while(have_rows('homePortfolio')): the_row();
+                    $logo = get_sub_field('homePortfolio_logo');
+                    $content = get_sub_field('homePortfolio_content');
+                ?>
+                <article class="realization">
+                    <div class="realization__content">
+                        <div class="logo">
+                            <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>"/>
+                        </div>
+                        <p><?php echo $content; ?></p>
+                    </div>
+                    <div class="realization__images">
+                        <?php while(have_rows('homePortfolio_images')): the_row(); ?>
+                        <div class="image">
+                            <img src="<?php echo get_sub_field('homePortfolio_images_img')['url']; ?>" alt="<?php echo get_sub_field('homePortfolio_images_img')['alt']; ?>"/>
+                        </div>
+                        <?php endwhile; ?>
+                    </div>
+                </article>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>
