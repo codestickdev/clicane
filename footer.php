@@ -11,21 +11,42 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'clicane' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'clicane' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'clicane' ), 'clicane', '<a href="https://codestick.pl/">Codestick</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer id="colophon" class="siteFooter">
+		<div class="siteFooter__wrap container">
+			<div class="siteFooter__column">
+				<a href="mailto:info@clicane.com" class="siteFooter__position">
+					<img src="<?php echo get_template_directory_uri() . '/images/icons/mail_ico.svg'; ?>"/>
+					<span>info@clicane.com</span>
+				</a>
+				<a href="tel:+48795757009" class="siteFooter__position">
+					<img src="<?php echo get_template_directory_uri() . '/images/icons/phone_ico.svg'; ?>"/>
+					<span>+48 795 757 009</span>
+				</a>
+			</div>
+			<div class="siteFooter__column">
+				<h3>odwiedź nas</h3>
+				<div class="social">
+					<a href="#" target="_blank">
+						<img src="<?php echo get_template_directory_uri() . '/images/icons/ig_ico.svg'; ?>"/>
+					</a>
+					<a href="#" target="_blank">
+						<img src="<?php echo get_template_directory_uri() . '/images/icons/in_ico.svg'; ?>"/>
+					</a>
+				</div>
+			</div>
+			<div class="siteFooter__column">
+				<a href="https://goo.gl/maps/jDxhNc4kN7eHXMbp9" target="_blank" class="siteFooter__position">
+					<img src="<?php echo get_template_directory_uri() . '/images/icons/marker_ico.svg'; ?>"/>
+					<span>Konstruktorska 12a<br/>
+					02-673 Warszawa<br/>
+					Polska</span>
+				</a>
+			</div>
+		</div>
+		<div class="siteFooter__copy">
+			<p>© clicane <?php echo get_the_date('Y'); ?></p>
+		</div>
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

@@ -126,6 +126,88 @@ get_header(); ?>
             </div>
         </div>
     </section>
+
+    <section class="homeClients">
+        <div class="homeClients__wrap container">
+            <div class="sectionHeading">
+                <h2 class="sectionHeading__title">Klienci</h2>
+                <p>Współpracujemy z klientami z wielu branż.<br/>Oto niektórzy z nich:</p>
+            </div>
+            <div class="homeClients__list">
+                <?php while(have_rows('homeClients')): the_row(); ?>
+                <div class="client">
+                    <img src="<?php echo get_sub_field('homeClients_logo')['url']; ?>" alt="<?php echo get_sub_field('homeClients_logo')['alt']; ?>"/>
+                </div>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="homeAbout">
+        <div class="homeAbout__wrap">
+            <div class="sectionHeading">
+                <h2 class="sectionHeading__title"><?php echo get_field('homeAbout_title'); ?></h2>
+                <p><?php echo get_field('homeAbout_lead'); ?></p>
+            </div>
+            <div class="homeAbout__row container">
+                <?php while(have_rows('homeAbout')): the_row();
+                    $thumb = get_sub_field('homeAbout_image');
+                    $name = get_sub_field('homeAbout_name');
+                    $desc = get_sub_field('homeAbout_desc');
+                ?>
+                <div class="owner">
+                    <div class="owner__thumb">
+                        <img src="<?php echo $thumb['url']; ?>" alt="<?php echo $thumb['alt']; ?>"/>
+                    </div>
+                    <h3><?php echo $name; ?></h3>
+                    <p><?php echo $desc; ?></p>
+                </div>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="homeText homeText--small">
+        <div class="homeText__wrap">
+            <h2>Oboje mamy głowy pełne <br/>pomysłów i chętnie Ci pomożemy!</h2>
+        </div>
+    </section>
+
+    <section class="homeContact">
+        <div class="homeContact__wrap container">
+            <div class="sectionHeading">
+                <h2 class="sectionHeading__title">Kontakt</h2>
+                <p>Skontaktuj się z nami. Stwórzmy coś niesamowitego!</p>
+            </div>  
+            <div class="homeContact__content">
+                <div class="homeContact__image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/homeContact_img.svg'; ?>"/>
+                </div>          
+                <div class="homeContact__form">
+                    <form id="contactForm" class="contactForm" name="contactForm" type="POST">
+                        <h3>Wyślij nam wiadomość:</h3>
+                        <div class="contactForm__alert"><p></p></div>
+                        <div class="contactForm__row">
+                            <div class="contactForm__input">
+                                <input type="phone" class="input" name="contactPhone" placeholder="Telefon"/>
+                            </div>
+                        </div>
+                        <div class="contactForm__row">
+                            <div class="contactForm__input">
+                                <input type="mail" class="input" name="contactMail" placeholder="Email"/>
+                            </div>
+                        </div>
+                        <div class="contactForm__row">
+                            <div class="contactForm__input">
+                                <textarea class="input input--textarea" name="contactMessage" placeholder="Wiadomość"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--button contactForm__submit"><span>wyślij</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>

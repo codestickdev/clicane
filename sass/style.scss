@@ -32,12 +32,15 @@ a{
 	max-width: fit-content;
 	max-width: -moz-max-content;
 	max-width: -webkit-fit-content;
+	cursor: pointer;
+	outline: none !important;
 	transition: ease .3s;
 
 	span{
 		font-size: 30px;
 		line-height: 1;
 		font-weight: 500;
+		font-family: 'Lato', sans-serif;
 		color: #fff;
 		padding-right: 40px;
 		position: relative;
@@ -66,6 +69,11 @@ a{
 				right: -8px;
 			}
 		}
+	}
+
+	&--button{
+		border: 0;
+		border-radius: 0;
 	}
 }
 @media (max-width: 991px){
@@ -240,6 +248,96 @@ a{
 
 				&:hover{
 					opacity: .7;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1599px){
+	.slick-slider{
+		.slick-arrow{
+			&.slick-prev{
+				left: -30px;
+			}
+			&.slick-next{
+				right: -30px;
+			}
+		}
+	}
+}
+@media (max-width: 1199px){
+	.slick-slider{
+		.slick-arrow{
+			width: 40px;
+			height: 40px;
+
+			&:before{
+				background-size: 40px;
+    			width: 40px;
+    			height: 40px;
+			}
+			&.slick-prev{
+				left: -60px;
+			}
+			&.slick-next{
+				right: -60px;
+			}
+		}
+	}
+}
+@media (max-width: 991px){
+	.slick-slider{
+		&.slick-dotted{
+			padding-bottom: 30px;
+		}
+		.slick-arrow{
+			&.slick-prev{
+				left: -30px;
+			}
+			&.slick-next{
+				right: -30px;
+			}
+		}
+		.slick-dots{
+			li{
+				margin: 0 5px;
+
+				button{
+					width: 12px;
+					height: 12px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 575px){
+	.slick-slider{
+		&.slick-dotted{
+			padding-bottom: 30px;
+		}
+		.slick-arrow{
+			width: 30px;
+			height: 30px;
+
+			&:before{
+				background-size: 30px;
+    			width: 30px;
+    			height: 30px;
+			}
+			&.slick-prev{
+				left: 0;
+			}
+			&.slick-next{
+				right: 0;
+			}
+		}
+		.slick-dots{
+			li{
+				margin: 0 5px;
+
+				button{
+					width: 12px;
+					height: 12px;
 				}
 			}
 		}

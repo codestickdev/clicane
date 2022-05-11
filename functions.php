@@ -157,6 +157,11 @@ function clicane_scripts() {
 	wp_register_script( 'clicane-sliders', get_template_directory_uri() . '/js/_sliders.js', null, null, true );
 	wp_enqueue_script('clicane-sliders');
 
+	// Forms
+	wp_register_script( 'clicane-forms', get_template_directory_uri() . '/js/_forms.js', null, null, true );
+	wp_enqueue_script('clicane-forms');
+	wp_localize_script( 'clicane-forms', 'clic', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+
 	// Main script
 	wp_register_script( 'clicane-script', get_template_directory_uri() . '/js/custom.js', null, null, true );
 	wp_enqueue_script('clicane-script');
@@ -191,3 +196,26 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+add_action('wp_ajax_contactForm', 'contactForm');
+add_action('wp_ajax_nopriv_contactForm', 'contactForm');
+function contactForm(){
+	$phone = isset($_POST['phone']) ? $_POST['phone'] : '';
+	$mail = isset($_POST['mail']) ? $_POST['mail'] : '';
+	$message = isset($_POST['message']) ? $_POST['message'] : '';
+
+	$to = 'piotrdevv@gmail.com';
+	$subject = '[clicane.pl] Formularz kontaktowy';
+	$content = "Telefon: " . $phone . "\r\nMail: " . $mail . "\r\nWiadomość: " . $message;
+
+	$headers = array('"Content-Type", "multipart/form-data"; charset=UTF-8');
+	
+	$sent = false;
+	$sent = wp_mail( $to, $subject, $content, $headers);
+
+	$response = $sent;
+
+	echo $response;
+	
+	die();
+}
