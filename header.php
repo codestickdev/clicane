@@ -23,6 +23,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
+	<div class="siteHeader__clone"></div>
 	<header id="masthead" class="siteHeader">
 		<div class="siteHeader__wrap container-lg">
 			<div class="siteHeader__logo">
@@ -37,12 +38,12 @@
 					<span></span>
 				</button>
 				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					)
-				);
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						)
+					);
 				?>
 				<div class="siteHeader__lang">
 					<div class="langSelector">
@@ -52,3 +53,16 @@
 			</nav>
 		</div>
 	</header>
+	<div class="menuMobile">
+		<div class="menuMobile__close"></div>
+		<div class="menuMobile__wrap">
+			<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					)
+				);
+			?>
+		</div>
+	</div>

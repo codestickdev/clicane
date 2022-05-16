@@ -8,7 +8,7 @@ get_header(); ?>
     <section class="homeHeader">
         <div class="homeHeader__wrap container">
             <div class="homeHeader__content">
-                <img src="<?php echo get_template_directory_uri() . '/images/homeHeader_hello.svg'; ?>" class="hello"/>
+                <p class="hello">Cześć!</p>
                 <h1><?php echo get_field('homeHeader_title'); ?></h1>
                 <a href="" class="btn"><span><?php echo get_field('homeHeader_btn'); ?></span></a>
             </div>
@@ -23,7 +23,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="homeVideo">
+    <section id="homeVideo" class="homeVideo">
         <div class="homeVideo__wrap container">
             <?php
             $attr = array(
@@ -96,7 +96,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="homePortfolio">
+    <section id="homePortfolio" class="homePortfolio">
         <div class="homePortfolio__wrap container">
             <div class="sectionHeading">
                 <h2 class="sectionHeading__title">Portfolio</h2>
@@ -127,7 +127,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="homeClients">
+    <section id="homeClients" class="homeClients">
         <div class="homeClients__wrap container">
             <div class="sectionHeading">
                 <h2 class="sectionHeading__title">Klienci</h2>
@@ -143,7 +143,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="homeAbout">
+    <section id="homeAbout" class="homeAbout">
         <div class="homeAbout__wrap">
             <div class="sectionHeading">
                 <h2 class="sectionHeading__title"><?php echo get_field('homeAbout_title'); ?></h2>
@@ -173,7 +173,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="homeContact">
+    <section id="homeContact" class="homeContact">
         <div class="homeContact__wrap container">
             <div class="sectionHeading">
                 <h2 class="sectionHeading__title">Kontakt</h2>

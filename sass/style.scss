@@ -16,6 +16,12 @@
  */
 @use 'pages/home';
 
+body{
+	&.noscroll{
+		overflow: hidden;
+	}
+}
+
 a{
 	text-decoration: none !important;
 	outline: none !important;
