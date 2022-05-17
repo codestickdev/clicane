@@ -106,6 +106,7 @@ a{
 	&__title{
 		display: block;
 		font-size: 60px;
+		font-weight: 500;
 		line-height: 1;
 		color: #fff;
 		margin: 0 auto 70px;
@@ -262,11 +263,20 @@ a{
 @media (max-width: 1599px){
 	.slick-slider{
 		.slick-arrow{
+			width: 50px;
+			height: 50px;
+
+			&:before{
+				background-size: 50px;
+				width: 50px;
+				height: 50px;
+			}
+
 			&.slick-prev{
-				left: -30px;
+				left: -15px;
 			}
 			&.slick-next{
-				right: -30px;
+				right: -15px;
 			}
 		}
 	}
@@ -283,10 +293,10 @@ a{
     			height: 40px;
 			}
 			&.slick-prev{
-				left: -60px;
+				left: -10px;
 			}
 			&.slick-next{
-				right: -60px;
+				right: -10px;
 			}
 		}
 	}

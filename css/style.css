@@ -434,7 +434,7 @@ body.admin-bar .homeHeader {
   display: block;
   font-size: 60px;
   line-height: 1;
-  font-weight: 600;
+  font-weight: 500;
   font-family: "Lato", sans-serif;
   color: #fff;
   margin: 0 0 75px;
@@ -933,7 +933,7 @@ body.admin-bar .homeHeader {
 .homeTools__heading {
   font-size: 30px;
   line-height: 45px;
-  font-weight: 400;
+  font-weight: 500;
   color: #000;
   margin: 0 0 30px;
   text-align: center;
@@ -1045,9 +1045,6 @@ body.admin-bar .homeHeader {
   max-width: 1320px;
   margin: 0 auto;
 }
-.homePortfolio__list .slick-list {
-  margin: 0 -30px;
-}
 .homePortfolio__list .realization {
   display: flex !important;
   align-items: center;
@@ -1100,14 +1097,15 @@ body.admin-bar .homeHeader {
 
 @media (max-width: 1599px) {
   .homePortfolio__list {
+    max-width: 1000px;
     padding: 0 50px 80px;
   }
   .homePortfolio__list .realization__content .logo {
     margin: 0 0 70px;
   }
   .homePortfolio__list .realization__content p {
-    font-size: 26px;
-    line-height: 40px;
+    font-size: 24px;
+    line-height: 36px;
   }
 }
 @media (max-width: 1199px) {
@@ -1164,7 +1162,7 @@ body.admin-bar .homeHeader {
 }
 @media (max-width: 575px) {
   .homePortfolio__list {
-    padding: 0 50px;
+    padding: 0 30px;
   }
 }
 @media (max-width: 450px) {
@@ -1266,6 +1264,7 @@ body.admin-bar .homeHeader {
   line-height: 40px;
   font-weight: 500;
   text-align: left;
+  color: #000;
   margin: 0;
 }
 
@@ -1421,7 +1420,7 @@ body.admin-bar .homeHeader {
   border-color: #f00;
 }
 .homeContact__form .contactForm__row .input:focus {
-  border-color: #000;
+  border-color: #0C154A;
 }
 .homeContact__form .contactForm__row .input::placeholder {
   color: #C8C8C8;
@@ -1599,6 +1598,7 @@ a {
 .sectionHeading__title {
   display: block;
   font-size: 60px;
+  font-weight: 500;
   line-height: 1;
   color: #fff;
   margin: 0 auto 70px;
@@ -1738,11 +1738,20 @@ a {
 }
 
 @media (max-width: 1599px) {
+  .slick-slider .slick-arrow {
+    width: 50px;
+    height: 50px;
+  }
+  .slick-slider .slick-arrow:before {
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+  }
   .slick-slider .slick-arrow.slick-prev {
-    left: -30px;
+    left: -15px;
   }
   .slick-slider .slick-arrow.slick-next {
-    right: -30px;
+    right: -15px;
   }
 }
 @media (max-width: 1199px) {
@@ -1756,10 +1765,10 @@ a {
     height: 40px;
   }
   .slick-slider .slick-arrow.slick-prev {
-    left: -60px;
+    left: -10px;
   }
   .slick-slider .slick-arrow.slick-next {
-    right: -60px;
+    right: -10px;
   }
 }
 @media (max-width: 991px) {

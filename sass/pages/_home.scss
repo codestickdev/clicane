@@ -25,7 +25,7 @@ body{
             display: block;
             font-size: 60px;
             line-height: 1;
-            font-weight: 600;
+            font-weight: 500;
             font-family: 'Lato', sans-serif;
             color: #fff;
             margin: 0 0 75px;
@@ -636,7 +636,7 @@ body{
     &__heading{
         font-size: 30px;
         line-height: 45px;
-        font-weight: 400;
+        font-weight: 500;
         color: #000;
         margin: 0 0 30px;
         text-align: center;
@@ -765,9 +765,9 @@ body{
         max-width: 1320px;
         margin: 0 auto;
 
-        .slick-list{
-            margin: 0 -30px;
-        }
+        // .slick-list{
+        //     margin: 0 -30px;
+        // }
 
         .realization{
             display: flex !important;
@@ -830,6 +830,7 @@ body{
 @media (max-width: 1599px){
     .homePortfolio{
         &__list{
+            max-width: 1000px;
             padding: 0 50px 80px;
 
             .realization{
@@ -838,8 +839,8 @@ body{
                         margin: 0 0 70px;
                     }
                     p{
-                        font-size: 26px;
-                        line-height: 40px;
+                        font-size: 24px;
+                        line-height: 36px;
                     }
                 }
             }
@@ -920,7 +921,7 @@ body{
 @media (max-width: 575px){
     .homePortfolio{
         &__list{
-            padding: 0 50px;
+            padding: 0 30px;
         }
     }
 }
@@ -1055,6 +1056,7 @@ body{
                 line-height: 40px;
                 font-weight: 500;
                 text-align: left;
+                color: #000;
                 margin: 0;
             }
         }
@@ -1237,7 +1239,7 @@ body{
                     }
 
                     &:focus{
-                        border-color: #000;
+                        border-color: v.$navy;
                     }
 
                     &::placeholder{
