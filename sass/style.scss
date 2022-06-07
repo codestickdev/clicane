@@ -30,8 +30,8 @@ a{
 
 .btn{
 	background-color: v.$yellow;
-	padding: 0 25px;
-	min-height: 60px;
+	padding: 0 20px;
+	min-height: 46px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -43,12 +43,12 @@ a{
 	transition: ease .3s;
 
 	span{
-		font-size: 30px;
+		font-size: 21px;
 		line-height: 1;
 		font-weight: 500;
 		font-family: 'Lato', sans-serif;
 		color: #fff;
-		padding-right: 40px;
+		padding-right: 24px;
 		position: relative;
 		top: -2px;
 
@@ -56,9 +56,9 @@ a{
 			content: '';
 			background-image: url('/wp-content/themes/clicane/images/btn_arrow.svg');
 			background-repeat: no-repeat;
-			background-size: 14px;
-			width: 14px;
-			height: 24px;
+			background-size: 9px;
+			width: 9px;
+			height: 15px;
 			position: absolute;
 			right: 0;
 			top: 55%;
@@ -84,33 +84,25 @@ a{
 }
 @media (max-width: 991px){
 	.btn{
-		min-height: 50px;
-
 		span{
-			font-size: 21px;
-			padding-right: 25px;
-
-			&:after{
-				background-size: 10px;
-				width: 10px;
-				height: 17px;
-			}
+			font-size: 18px;
+			padding-right: 20px;
 		}
 	}
 }
 
 .sectionHeading{
-	margin: 0 0 150px;
+	margin: 0 0 100px;
 	padding: 0 15px;
 
 	&__title{
 		display: block;
-		font-size: 60px;
+		font-size: 42px;
 		font-weight: 500;
 		line-height: 1;
 		color: #fff;
-		margin: 0 auto 70px;
-		padding: 21px 45px 30px;
+		margin: 0 auto 50px;
+		padding: 21px 36px 25px;
 		background-color: v.$navy;
 		max-width: fit-content;
 		max-width: -moz-max-content;
@@ -118,8 +110,8 @@ a{
 		transform: rotate(-10deg);
 	}
 	p{
-		font-size: 30px;
-		line-height: 45px;
+		font-size: 21px;
+		line-height: 32px;
 		font-weight: 500;
 		color: #000;
 		text-align: center;
@@ -132,12 +124,7 @@ a{
 
 		&__title{
 			font-size: 40px;
-			padding: 17px 40px 24px;
 			margin: 0 auto 55px;
-		}
-		p{
-			font-size: 24px;
-    		line-height: 35px;
 		}
 	}
 }
@@ -163,7 +150,7 @@ a{
 		&__title{
 			font-size: 25px;
 			padding: 10px 20px 14px;
-			margin: 0 auto 25px;
+			margin: 0 auto 40px;
 		}
 		p{
 			font-size: 16px;
@@ -177,11 +164,11 @@ a{
  */
 .slick-slider{
 	&.slick-dotted{
-		padding-bottom: 80px;
+		padding-bottom: 0;
 	}
 	.slick-arrow{
-		width: 60px;
-		height: 60px;
+		width: 42px;
+		height: 42px;
 		font-size: 0;
 		padding: 0;
 		border: 0;
@@ -199,22 +186,22 @@ a{
 		&:before{
 			content: '';
 			background-repeat: no-repeat;
-			background-size: 60px;
-			width: 60px;
-			height: 60px;
+			background-size: 42px;
+			width: 42px;
+			height: 42px;
 			position: relative;
 			display: block;
 			z-index: 3;
 		}
 		&.slick-prev{
-			left: -100px;
+			left: -15px;
 
 			&:before{
 				background-image: url('/wp-content/themes/clicane/images/slider_arrow_left.svg');
 			}
 		}
 		&.slick-next{
-			right: -100px;
+			right: -15px;
 
 			&:before{
 				background-image: url('/wp-content/themes/clicane/images/slider_arrow_right.svg');
@@ -229,12 +216,12 @@ a{
 		padding: 0;
 		margin: 0 auto;
 		position: absolute;
-		bottom: 0;
+		bottom: -50px;
 		left: 0;
 		right: 0;
 
 		li{
-			margin: 0 10px;
+			margin: 0 5px;
 
 			&.slick-active{
 				button{
@@ -248,8 +235,8 @@ a{
 				font-size: 0;
 				border-radius: 100%;
 				background-color: #D9D9D9;
-				width: 15px;
-				height: 15px;
+				width: 11px;
+				height: 11px;
 				cursor: pointer;
 				transition: ease .3s;
 
@@ -260,37 +247,42 @@ a{
 		}
 	}
 }
-@media (max-width: 1599px){
+@media (max-width: 991px){
 	.slick-slider{
 		.slick-arrow{
-			width: 50px;
-			height: 50px;
+			width: 34px;
+			height: 34px;
 
 			&:before{
-				background-size: 50px;
-				width: 50px;
-				height: 50px;
+				background-size: 34px;
+				width: 34px;
+				height: 34px;
 			}
+		}
+		.slick-dots{
+			bottom: -20px;
+			
+			li{
+				margin: 0 4px;
 
-			&.slick-prev{
-				left: -15px;
-			}
-			&.slick-next{
-				right: -15px;
+				button{
+					width: 9px;
+					height: 9px;
+				}
 			}
 		}
 	}
 }
-@media (max-width: 1199px){
+@media (max-width: 575px){
 	.slick-slider{
 		.slick-arrow{
-			width: 40px;
-			height: 40px;
+			width: 28px;
+			height: 28px;
 
 			&:before{
-				background-size: 40px;
-    			width: 40px;
-    			height: 40px;
+				background-size: 28px;
+    			width: 28px;
+    			height: 28px;
 			}
 			&.slick-prev{
 				left: -10px;
@@ -299,61 +291,15 @@ a{
 				right: -10px;
 			}
 		}
-	}
-}
-@media (max-width: 991px){
-	.slick-slider{
-		&.slick-dotted{
-			padding-bottom: 30px;
-		}
-		.slick-arrow{
-			&.slick-prev{
-				left: -30px;
-			}
-			&.slick-next{
-				right: -30px;
-			}
-		}
 		.slick-dots{
+			bottom: -10px;
+
 			li{
-				margin: 0 5px;
+				margin: 0 3px;
 
 				button{
-					width: 12px;
-					height: 12px;
-				}
-			}
-		}
-	}
-}
-@media (max-width: 575px){
-	.slick-slider{
-		&.slick-dotted{
-			padding-bottom: 30px;
-		}
-		.slick-arrow{
-			width: 30px;
-			height: 30px;
-
-			&:before{
-				background-size: 30px;
-    			width: 30px;
-    			height: 30px;
-			}
-			&.slick-prev{
-				left: 0;
-			}
-			&.slick-next{
-				right: 0;
-			}
-		}
-		.slick-dots{
-			li{
-				margin: 0 5px;
-
-				button{
-					width: 12px;
-					height: 12px;
+					width: 8px;
+					height: 8px;
 				}
 			}
 		}

@@ -103,4 +103,19 @@
             $('.menuMobile').removeClass('menuMobile--active');
         });
     });
+
+    /**
+     * Home tools - mobile
+     */
+    $(document).ready(function(){
+        let tools = $('.homeTools__list').find('.pos');
+
+        $(tools).last().addClass('pos--end');
+        
+        if($(window).width() < 396){
+            $(tools).each(function(){
+                $(this).removeClass('pos--last');
+            });
+        }
+    });
 }(jQuery));

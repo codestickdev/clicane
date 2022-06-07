@@ -11,7 +11,7 @@ body{
 }
 .siteHeader{
     width: 100%;
-    min-height: 77px;
+    min-height: 54px;
     background-color: #fff;
     box-shadow: 0 3px 6px #00000029;
     position: fixed;
@@ -30,7 +30,7 @@ body{
         min-height: inherit;
     }
     &__logo{
-        max-width: 150px;
+        max-width: 110px;
 
         a{
             display: block;
@@ -63,7 +63,7 @@ body{
                 }
 
                 a{
-                    font-size: 25px;
+                    font-size: 21px;
                     line-height: 30px;
                     font-weight: 500;
                     color: #000;
@@ -79,7 +79,7 @@ body{
             align-items: center;
 
             span{
-                font-size: 37px;
+                font-size: 32px;
                 line-height: 40px;
                 font-weight: 400;
                 color: #000;
@@ -87,7 +87,7 @@ body{
             }
 
             p{
-                font-size: 25px;
+                font-size: 21px;
                 line-height: 30px;
                 font-weight: 500;
                 color: #000;
@@ -104,9 +104,6 @@ body{
 }
 @media (max-width: 1199px){
     .siteHeader{
-        &__logo{
-            max-width: 130px;
-        }
         &__nav{
             ul{
                 li{
@@ -142,8 +139,8 @@ body{
                 display: flex !important;
                 justify-content: space-between;
                 flex-direction: column;
-                width: 32px;
-                height: 20px;
+                width: 26px;
+                height: 16px;
                 background: unset;
                 border: 0;
                 border-radius: 0;
@@ -162,7 +159,8 @@ body{
             }
         }
         &__lang{
-            margin-left: 30px;
+            display: none;
+            margin-left: 20px;
         }
     }
 }
@@ -245,6 +243,15 @@ body{
                     color: #000;
                 }
             }
+        }
+        .langSelector{
+            display: block;
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 500;
+            margin: 35px 0 0;
+            text-align: center;
+            color: #009274;
         }
     }
 }

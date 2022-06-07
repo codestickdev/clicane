@@ -1,5 +1,5 @@
 .siteFooter{
-    padding: 100px 0 105px;
+    padding: 70px 0;
     background-color: #F2F2F2;
 
     &__wrap{
@@ -17,28 +17,32 @@
         }
 
         img{
-            max-width: 54px;
-            margin-right: 30px;
+            max-width: 42px;
+            margin-right: 23px;
         }
         span{
-            font-size: 30px;
-            line-height: 45px;
+            font-size: 21px;
+            line-height: 32px;
             font-weight: 500;
             color: #000;
             margin: 0;
         }
     }
     &__column{
-        max-width: 346px;
+        max-width: 250px;
         width: 100%;
 
+        &--mobile{
+            display: none;
+        }
+
         h3{
-            font-size: 45px;
-            line-height: 67px;
+            font-size: 32px;
+            line-height: 47px;
             font-weight: 500;
             color: #000;
             text-align: center;
-            margin: 0 0 56px;
+            margin: 0 0 48px;
         }
         a{
             transition: ease .3s;
@@ -51,7 +55,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            max-width: 155px;
+            max-width: 125px;
             margin: 0 auto;
 
             a{
@@ -59,17 +63,17 @@
 
                 img{
                     width: 100%;
-                    max-width: 60px;
+                    max-width: 47px;
                 }
             }
         }
     }
     &__copy{
-        margin-top: 150px;
+        margin-top: 100px;
         
         p{
-            font-size: 30px;
-            line-height: 45px;
+            font-size: 21px;
+            line-height: 32px;
             color: #000;
             text-align: center;
             margin: 0;
@@ -80,28 +84,12 @@
     .siteFooter{
         &__position{
             img{
-                max-width: 40px;
                 margin-right: 20px;
-            }
-            span{
-                font-size: 24px;
-                line-height: 34px;
             }
         }
         &__column{
             h3{
-                font-size: 35px;
-                line-height: 57px;
                 margin: 0 0 40px;
-            }
-            .social{
-                max-width: 135px;
-
-                a{
-                    img{
-                        max-width: 50px;
-                    }
-                }
             }
         }
     }
@@ -128,6 +116,13 @@
         &__column{
             max-width: 100%;
             margin: 0 0 50px;
+
+            &--mobile{
+                display: block;
+            }
+            &--desktop{
+                display: none;
+            }
             
             &:last-of-type{
                 margin: 0;
@@ -142,8 +137,8 @@
     .siteFooter{
         &__position{
             span{
-                font-size: 20px;
-                line-height: 28px;
+                font-size: 18px;
+                line-height: 24px;
             }
         }
         &__column{
@@ -157,18 +152,13 @@
 
                 a{
                     img{
-                        max-width: 42px;
+                        max-width: 38px;
                     }
                 }
             }
         }
         &__copy{
             margin-top: 60px;
-            
-            p{
-                font-size: 24px;
-                line-height: 36px;
-            }
         }
     }
 }

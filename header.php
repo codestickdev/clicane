@@ -25,7 +25,7 @@
 <div id="page" class="site">
 	<div class="siteHeader__clone"></div>
 	<header id="masthead" class="siteHeader">
-		<div class="siteHeader__wrap container-lg">
+		<div class="siteHeader__wrap container">
 			<div class="siteHeader__logo">
 				<a href="#page">
 					<img src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>"/>
@@ -64,5 +64,6 @@
 					)
 				);
 			?>
+			<a href="#" class="langSelector">english</a>
 		</div>
 	</div>

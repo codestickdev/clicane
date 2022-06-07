@@ -13,6 +13,17 @@
 
 	<footer id="colophon" class="siteFooter">
 		<div class="siteFooter__wrap container">
+			<div class="siteFooter__column siteFooter__column--mobile">
+				<h3>odwiedź nas</h3>
+				<div class="social">
+					<a href="#" target="_blank">
+						<img src="<?php echo get_template_directory_uri() . '/images/icons/ig_ico.svg'; ?>"/>
+					</a>
+					<a href="#" target="_blank">
+						<img src="<?php echo get_template_directory_uri() . '/images/icons/in_ico.svg'; ?>"/>
+					</a>
+				</div>
+			</div>
 			<div class="siteFooter__column">
 				<a href="mailto:info@clicane.com" class="siteFooter__position">
 					<img src="<?php echo get_template_directory_uri() . '/images/icons/mail_ico.svg'; ?>"/>
@@ -23,7 +34,7 @@
 					<span>+48 795 757 009</span>
 				</a>
 			</div>
-			<div class="siteFooter__column">
+			<div class="siteFooter__column siteFooter__column--desktop">
 				<h3>odwiedź nas</h3>
 				<div class="social">
 					<a href="#" target="_blank">

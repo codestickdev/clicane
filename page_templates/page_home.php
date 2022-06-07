@@ -16,11 +16,6 @@ get_header(); ?>
                 <img src="<?php echo get_field('homeHeader_image')['url']; ?>" alt="<?php echo get_field('homeHeader_image')['alt']; ?>"/>
             </div>
         </div>
-        <div class="homeHeader__nav">
-            <a href="#">
-                <img src="<?php echo get_template_directory_uri() . '/images/scrollArrow.svg'; ?>"/>
-            </a>
-        </div>
     </section>
 
     <section id="homeVideo" class="homeVideo">
@@ -100,7 +95,7 @@ get_header(); ?>
         <div class="homePortfolio__wrap container">
             <div class="sectionHeading">
                 <h2 class="sectionHeading__title">Portfolio</h2>
-                <p>Nasze prezentacje są wyświetlane na wielkich<br/>konferencjach, targach i spotkaniach wewnętrznych.</p>
+                <p>Nasze prezentacje są wyświetlane na wielkich <br/>konferencjach, targach i spotkaniach wewnętrznych.</p>
             </div>
             <div class="homePortfolio__list">
                 <?php while(have_rows('homePortfolio')): the_row();
@@ -120,6 +115,9 @@ get_header(); ?>
                             <img src="<?php echo get_sub_field('homePortfolio_images_img')['url']; ?>" alt="<?php echo get_sub_field('homePortfolio_images_img')['alt']; ?>"/>
                         </div>
                         <?php endwhile; ?>
+                    </div>
+                    <div class="realization__logo">
+                        <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>"/>
                     </div>
                 </article>
                 <?php endwhile; ?>
