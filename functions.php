@@ -204,7 +204,7 @@ function contactForm(){
 	$mail = isset($_POST['mail']) ? $_POST['mail'] : '';
 	$message = isset($_POST['message']) ? $_POST['message'] : '';
 
-	$to = 'piotrdevv@gmail.com';
+	$to = 'info@clicane.com';
 	$subject = '[clicane.pl] Formularz kontaktowy';
 	$content = "Telefon: " . $phone . "\r\nMail: " . $mail . "\r\nWiadomość: " . $message;
 
