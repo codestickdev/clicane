@@ -14,7 +14,7 @@
 	<footer id="colophon" class="siteFooter">
 		<div class="siteFooter__wrap container">
 			<div class="siteFooter__column siteFooter__column--mobile">
-				<h3>odwiedź nas</h3>
+				<h3><?php pll_e('odwiedź nas'); ?></h3>
 				<div class="social">
 					<a href="#" target="_blank">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/ig_ico.svg'; ?>"/>
@@ -35,12 +35,12 @@
 				</a>
 			</div>
 			<div class="siteFooter__column siteFooter__column--desktop">
-				<h3>odwiedź nas</h3>
+				<h3><?php pll_e('odwiedź nas'); ?></h3>
 				<div class="social">
-					<a href="#" target="_blank">
+					<a href="https://instagram.com/clicane_presentation_design" target="_blank">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/ig_ico.svg'; ?>"/>
 					</a>
-					<a href="#" target="_blank">
+					<a href="https://www.linkedin.com/company/clicane" target="_blank">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/in_ico.svg'; ?>"/>
 					</a>
 				</div>
@@ -48,9 +48,7 @@
 			<div class="siteFooter__column">
 				<a href="https://goo.gl/maps/jDxhNc4kN7eHXMbp9" target="_blank" class="siteFooter__position">
 					<img src="<?php echo get_template_directory_uri() . '/images/icons/marker_ico.svg'; ?>"/>
-					<span>Konstruktorska 12a<br/>
-					02-673 Warszawa<br/>
-					Polska</span>
+					<span><?php pll_e('Konstruktorska 12a <br/>02-673 Warszawa <br/>Polska'); ?></span>
 				</a>
 			</div>
 		</div>

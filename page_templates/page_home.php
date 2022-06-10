@@ -8,9 +8,9 @@ get_header(); ?>
     <section class="homeHeader">
         <div class="homeHeader__wrap container">
             <div class="homeHeader__content">
-                <p class="hello">Cześć!</p>
+                <p class="hello"><?php pll_e('Cześć!') ?></p>
                 <h1><?php echo get_field('homeHeader_title'); ?></h1>
-                <a href="" class="btn"><span><?php echo get_field('homeHeader_btn'); ?></span></a>
+                <a href="#homeContact" class="btn"><span><?php echo get_field('homeHeader_btn'); ?></span></a>
             </div>
             <div class="homeHeader__image">
                 <img src="<?php echo get_field('homeHeader_image')['url']; ?>" alt="<?php echo get_field('homeHeader_image')['alt']; ?>"/>
@@ -27,23 +27,23 @@ get_header(); ?>
             );
             echo wp_video_shortcode($attr); ?>
             <div class="homeVideo__play">
-                <span>zobacz film</span>
+                <span><?php pll_e('zobacz film'); ?></span>
             </div>
         </div>
     </section>
 
     <section class="homeText">
         <div class="homeText__wrap">
-            <h2>Nie musisz już więcej klikać,<br/> zrobimy to za Ciebie.</h2>
+            <h2><?php pll_e('Nie musisz już więcej klikać,<br/> zrobimy to za Ciebie.') ?></h2>
         </div>
     </section>
 
-    <section class="homeOffer">
+    <section id="homeOffer" class="homeOffer">
         <div class="sectionHeading">
             <h2 class="sectionHeading__title"><?php echo get_field('homeOffer_title'); ?></h2>
             <p><?php echo get_field('homeOffer_lead'); ?></p>
         </div>
-        <h2 class="homeOffer__heading">Prezentacje multimedialne</h2>
+        <h2 class="homeOffer__heading"><?php pll_e('Prezentacje multimedialne'); ?></h2>
         <div class="homeOffer__list container">
             <?php while(have_rows('homeOffer_list')): the_row(); ?>
             <div class="pos">
@@ -54,7 +54,7 @@ get_header(); ?>
             </div>
             <?php endwhile; ?>
         </div>
-        <h2 class="homeOffer__heading">Prezentacje multimedialne</h2>
+        <h2 class="homeOffer__heading"><?php pll_e('Dokumenty multimedialne'); ?></h2>
         <div class="homeOffer__list homeOffer__list--short container">
             <?php while(have_rows('homeOffer_list_short')): the_row(); ?>
             <div class="pos">
@@ -69,7 +69,7 @@ get_header(); ?>
 
     <section class="homeTools">
         <div class="homeTools__wrap container">
-            <h2 class="homeTools__heading">W naszej pracy korzystamy z wielu narzędzi:</h2>
+            <h2 class="homeTools__heading"><?php pll_e('W naszej pracy korzystamy z wielu narzędzi:'); ?></h2>
             <div class="homeTools__list">
                 <?php
                     $elements = 0;
@@ -95,7 +95,7 @@ get_header(); ?>
         <div class="homePortfolio__wrap container">
             <div class="sectionHeading">
                 <h2 class="sectionHeading__title">Portfolio</h2>
-                <p>Nasze prezentacje są wyświetlane na wielkich <br/>konferencjach, targach i spotkaniach wewnętrznych.</p>
+                <p><?php pll_e('Nasze prezentacje są wyświetlane na wielkich <br/>konferencjach, targach i spotkaniach wewnętrznych.'); ?></p>
             </div>
             <div class="homePortfolio__list">
                 <?php while(have_rows('homePortfolio')): the_row();
@@ -128,8 +128,8 @@ get_header(); ?>
     <section id="homeClients" class="homeClients">
         <div class="homeClients__wrap container">
             <div class="sectionHeading">
-                <h2 class="sectionHeading__title">Klienci</h2>
-                <p>Współpracujemy z klientami z wielu branż.<br/>Oto niektórzy z nich:</p>
+                <h2 class="sectionHeading__title"><?php pll_e('Klienci'); ?></h2>
+                <p><?php pll_e('Współpracujemy z klientami z wielu branż.<br/>Oto niektórzy z nich:'); ?></p>
             </div>
             <div class="homeClients__list">
                 <?php while(have_rows('homeClients')): the_row(); ?>
@@ -167,15 +167,15 @@ get_header(); ?>
 
     <section class="homeText homeText--small">
         <div class="homeText__wrap">
-            <h2>Oboje mamy głowy pełne <br/>pomysłów i chętnie Ci pomożemy!</h2>
+            <h2><?php pll_e('Oboje mamy głowy pełne <br/>pomysłów i chętnie Ci pomożemy!'); ?></h2>
         </div>
     </section>
 
     <section id="homeContact" class="homeContact">
         <div class="homeContact__wrap container">
             <div class="sectionHeading">
-                <h2 class="sectionHeading__title">Kontakt</h2>
-                <p>Skontaktuj się z nami. Stwórzmy coś niesamowitego!</p>
+                <h2 class="sectionHeading__title"><?php pll_e('Kontakt'); ?></h2>
+                <p><?php pll_e('Skontaktuj się z nami. Stwórzmy coś niesamowitego!'); ?></p>
             </div>  
             <div class="homeContact__content">
                 <div class="homeContact__image">
@@ -183,11 +183,11 @@ get_header(); ?>
                 </div>          
                 <div class="homeContact__form">
                     <form id="contactForm" class="contactForm" name="contactForm" type="POST">
-                        <h3>Wyślij nam wiadomość:</h3>
+                        <h3><?php pll_e('Wyślij nam wiadomość:'); ?></h3>
                         <div class="contactForm__alert"><p></p></div>
                         <div class="contactForm__row">
                             <div class="contactForm__input">
-                                <input type="phone" class="input" name="contactPhone" placeholder="Telefon"/>
+                                <input type="phone" class="input" name="contactPhone" placeholder="<?php pll_e('Telefon'); ?>"/>
                             </div>
                         </div>
                         <div class="contactForm__row">
@@ -197,10 +197,10 @@ get_header(); ?>
                         </div>
                         <div class="contactForm__row">
                             <div class="contactForm__input">
-                                <textarea class="input input--textarea" name="contactMessage" placeholder="Wiadomość"></textarea>
+                                <textarea class="input input--textarea" name="contactMessage" placeholder="<?php pll_e('Wiadomość'); ?>"></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn--button contactForm__submit"><span>wyślij</span></button>
+                        <button type="submit" class="btn btn--button contactForm__submit"><span><?php pll_e('wyślij'); ?></span></button>
                     </form>
                 </div>
             </div>

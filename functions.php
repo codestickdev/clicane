@@ -219,3 +219,27 @@ function contactForm(){
 	
 	die();
 }
+
+/**
+ * Translations
+ */
+add_action('init', function() {
+	pll_register_string('clicane', 'Cześć!');
+	pll_register_string('clicane', 'zobacz film');
+	pll_register_string('clicane', 'Nie musisz już więcej klikać,<br/> zrobimy to za Ciebie.');
+	pll_register_string('clicane', 'Prezentacje multimedialne');
+	pll_register_string('clicane', 'Dokumenty multimedialne');
+	pll_register_string('clicane', 'W naszej pracy korzystamy z wielu narzędzi:');
+	pll_register_string('clicane', 'Nasze prezentacje są wyświetlane na wielkich <br/>konferencjach, targach i spotkaniach wewnętrznych.');
+	pll_register_string('clicane', 'Klienci');
+	pll_register_string('clicane', 'Współpracujemy z klientami z wielu branż.<br/>Oto niektórzy z nich:');
+	pll_register_string('clicane', 'Oboje mamy głowy pełne <br/>pomysłów i chętnie Ci pomożemy!');
+	pll_register_string('clicane', 'Kontakt');
+	pll_register_string('clicane', 'Skontaktuj się z nami. Stwórzmy coś niesamowitego!');
+	pll_register_string('clicane', 'Wyślij nam wiadomość:');
+	pll_register_string('clicane', 'Telefon');
+	pll_register_string('clicane', 'Wiadomość');
+	pll_register_string('clicane', 'wyślij');
+	pll_register_string('clicane', 'odwiedź nas');
+	pll_register_string('clicane', 'Konstruktorska 12a <br/>02-673 Warszawa <br/>Polska');
+});

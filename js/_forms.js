@@ -74,14 +74,37 @@
                     success: function(response){
                         console.log(response);
                         form.removeClass('loading');
-                        $('.contactForm__alert').addClass('contactForm__alert--visible');
 
                         if(response == true || response == 'true'){
                             cleanForm(form);
-                            $('.contactForm__alert p').html('Formularz został pomyślnie wysłany.');
+
+                            // clear values
+                            let inputs = form.find('input'),
+                                textarea = form.find('textarea');
+
+                            inputs.each(function(){
+                                $(this).val('');
+                            });
+                            textarea.val('');
+
+                            // show alert
+                            $('.contactForm__alert').addClass('contactForm__alert--visible');
+
+                            // add notice
+                            if($('html').attr('lang') == 'en-US'){
+                                $('.contactForm__alert p').html('The form has been successfully sent.');
+                            }else{
+                                $('.contactForm__alert p').html('Formularz został pomyślnie wysłany.');
+                            }
                         }else{
+                            $('.contactForm__alert').addClass('contactForm__alert--visible');
                             $('.contactForm__alert').addClass('contactForm__alert--error');
-                            $('.contactForm__alert p').html('Wystąpił błąd podczas wysyłania formularza. Spróbuj ponownie później.');
+
+                            if($('html').attr('lang') == 'en-US'){
+                                $('.contactForm__alert p').html('There was an error sending the form. Please try again later.');
+                            }else{
+                                $('.contactForm__alert p').html('Wystąpił błąd podczas wysyłania formularza. Spróbuj ponownie później.');
+                            }
                         }
                     }
                 });

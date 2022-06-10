@@ -47,7 +47,8 @@
 				?>
 				<div class="siteHeader__lang">
 					<div class="langSelector">
-						<span>/</span><p>en</p>
+						<span>/</span>
+						<?php pll_the_languages( array( 'show_flags' => 0, 'show_names' => 0, 'display_names_as' => 'slug', 'hide_current' => 1 ) ); ?>
 					</div>
 				</div>
 			</nav>
@@ -64,6 +65,6 @@
 					)
 				);
 			?>
-			<a href="#" class="langSelector">english</a>
+			<?php pll_the_languages( array( 'show_flags' => 0, 'show_names' => 0, 'display_names_as' => 'name', 'hide_current' => 1 ) ); ?>
 		</div>
 	</div>

@@ -6,6 +6,7 @@
             arrows: true,
             dots: true,
             speed: 800,
+            centerMode: true,
         });
     });
 }(jQuery));

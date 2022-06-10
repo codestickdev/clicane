@@ -194,14 +194,14 @@ a{
 			z-index: 3;
 		}
 		&.slick-prev{
-			left: -15px;
+			left: -45px;
 
 			&:before{
 				background-image: url('/wp-content/themes/clicane/images/slider_arrow_left.svg');
 			}
 		}
 		&.slick-next{
-			right: -15px;
+			right: -45px;
 
 			&:before{
 				background-image: url('/wp-content/themes/clicane/images/slider_arrow_right.svg');
@@ -285,10 +285,10 @@ a{
     			height: 28px;
 			}
 			&.slick-prev{
-				left: -10px;
+				left: -30px;
 			}
 			&.slick-next{
-				right: -10px;
+				right: -30px;
 			}
 		}
 		.slick-dots{
