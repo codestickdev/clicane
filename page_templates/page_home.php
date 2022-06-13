@@ -187,7 +187,7 @@ get_header(); ?>
                         <div class="contactForm__alert"><p></p></div>
                         <div class="contactForm__row">
                             <div class="contactForm__input">
-                                <input type="phone" class="input" name="contactPhone" placeholder="<?php pll_e('Telefon'); ?>"/>
+                                <input type="phone" class="input" name="contactPhone" placeholder="<?php pll_e('Telefon'); ?>" optional="true"/>
                             </div>
                         </div>
                         <div class="contactForm__row">

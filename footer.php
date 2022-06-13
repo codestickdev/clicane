@@ -16,10 +16,10 @@
 			<div class="siteFooter__column siteFooter__column--mobile">
 				<h3><?php pll_e('odwiedź nas'); ?></h3>
 				<div class="social">
-					<a href="#" target="_blank">
+					<a href="https://instagram.com/clicane_presentation_design" target="_blank">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/ig_ico.svg'; ?>"/>
 					</a>
-					<a href="#" target="_blank">
+					<a href="https://www.linkedin.com/company/clicane" target="_blank">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/in_ico.svg'; ?>"/>
 					</a>
 				</div>
