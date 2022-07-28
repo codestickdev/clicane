@@ -27,7 +27,9 @@ get_header(); ?>
             );
             echo wp_video_shortcode($attr); ?>
             <div class="homeVideo__play">
-                <span><?php pll_e('zobacz film'); ?></span>
+                <div class="button">
+                    <span><?php pll_e('zobacz film'); ?></span>
+                </div>
             </div>
         </div>
     </section>

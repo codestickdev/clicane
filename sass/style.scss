@@ -305,3 +305,30 @@ a{
 		}
 	}
 }
+
+/**
+ *	Cookie bar
+ */
+.cli-bar-container{
+	br{
+		display: none;
+	}
+	p{
+		font-size: 14px;
+		line-height: 21px;
+		font-weight: 400;
+		color: #000;
+		margin: 0;
+
+		a{
+			font-weight: 500;
+			color: #000 !important;
+			text-decoration: underline !important;
+			transition: ease .3s;
+
+			&:hover{
+				opacity: .7;
+			}
+		}
+	}
+}
