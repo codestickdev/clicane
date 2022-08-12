@@ -1154,7 +1154,7 @@ body.admin-bar .homeHeader {
 }
 .homeClients__list .client img {
   padding: 0 24px;
-  max-height: 60px;
+  max-height: 90px;
 }
 
 @media (max-width: 1199px) {
