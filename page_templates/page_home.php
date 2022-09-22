@@ -26,11 +26,6 @@ get_header(); ?>
                 'poster'    => get_field('homeVideo_bg')['url'],
             );
             echo wp_video_shortcode($attr); ?>
-            <!-- <div class="homeVideo__play">
-                <div class="button">
-                    <span><?php pll_e('zobacz film'); ?></span>
-                </div>
-            </div> -->
         </div>
     </section>
 
