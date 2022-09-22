@@ -142,7 +142,7 @@ function clicane_scripts() {
 	wp_style_add_data( 'clicane-style', 'rtl', 'replace' );
 
 	// Main style
-	wp_enqueue_style( 'clicane-custom-style', get_template_directory_uri() . '/css/style.css', array(), _S_VERSION );
+	wp_enqueue_style( 'clicane-custom-style', get_template_directory_uri() . '/css/style.css', array(), '1.15' );
 
 	// jQuery
 	wp_register_script( 'jQuery', get_template_directory_uri() . '/plugins/jQuery/jquery-2.2.4.min.js', null, null, true );
