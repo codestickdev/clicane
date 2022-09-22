@@ -26,11 +26,11 @@ get_header(); ?>
                 'poster'    => get_field('homeVideo_bg')['url'],
             );
             echo wp_video_shortcode($attr); ?>
-            <div class="homeVideo__play">
+            <!-- <div class="homeVideo__play">
                 <div class="button">
                     <span><?php pll_e('zobacz film'); ?></span>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -200,6 +200,13 @@ get_header(); ?>
                         <div class="contactForm__row">
                             <div class="contactForm__input">
                                 <textarea class="input input--textarea" name="contactMessage" placeholder="<?php pll_e('Wiadomość'); ?>"></textarea>
+                            </div>
+                        </div>
+                        <div class="contactForm__row">
+                            <div class="contactForm__input contactForm__input--checkbox">
+                                <div class="checkbox-trigger"></div>
+                                <input type="checkbox" name="contactAcceptance" required/>
+                                <label><?php pll_e('Przyjmuję do wiadomości, że moje dane osobowe podane przeze mnie w formularzu kontaktowym są przetwarzane przez firmę Kamil Rasiński w celu udzielenia odpowiedzi na moje zapytanie, zgodnie z <a href="https://clicane.pl/wp-content/uploads/2022/09/Polityka-prywatności_Clicane.pdf" target="_blank">Polityką prywatności</a>.', 'clicane'); ?></label>
                             </div>
                         </div>
                         <button type="submit" class="btn btn--button contactForm__submit"><span><?php pll_e('wyślij'); ?></span></button>

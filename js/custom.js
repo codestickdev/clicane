@@ -118,4 +118,18 @@
             });
         }
     });
+
+    /**
+     * Checkbox
+     */
+     $(document).ready(function(){
+        $('input[type="checkbox"]').on('click', function(){
+            if($(this).is(':checked')){
+                $(this).parent().find('.checkbox-trigger').addClass('active');
+            }
+            else if($(this).is(':not(:checked)')){
+                $(this).parent().find('.checkbox-trigger').removeClass('active');
+            }
+        });
+    });
 }(jQuery));

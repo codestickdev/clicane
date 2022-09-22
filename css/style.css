@@ -540,104 +540,37 @@ body.admin-bar .homeHeader {
   box-shadow: 0 0 10px #00000026;
 }
 .homeVideo__wrap .wp-video .mejs-overlay-button {
-  background-image: url("");
+  background-size: 285px;
+  width: 285px;
+  height: 90px;
+  background-position: center !important;
+  transition: ease 0.3s;
+}
+.homeVideo__wrap .wp-video .mejs-overlay-button:hover {
+  opacity: 0.7;
 }
 .homeVideo__wrap .wp-video .mejs-controls {
   display: none !important;
 }
-.homeVideo__play {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 4;
+
+html[lang=en-US] .homeVideo__wrap .wp-video .mejs-overlay-button {
+  background-image: url("/wp-content/themes/clicane/images/button_play_en.png");
 }
-.homeVideo__play .button {
-  background-color: #F2B705;
-  padding: 0 45px;
-  min-height: 86px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: fit-content;
-  max-width: -moz-max-content;
-  max-width: -webkit-fit-content;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  transform: translate(0, -50%);
-  transition: ease 0.3s;
-  cursor: pointer;
-  -webkit-box-shadow: 0 0 10px #0003;
-  box-shadow: 0 0 10px #0003;
-  z-index: 999;
-}
-.homeVideo__play .button span {
-  font-size: 32px;
-  line-height: 1;
-  font-weight: 500;
-  color: #fff;
-  padding-right: 40px;
-  position: relative;
-  top: -2px;
-}
-.homeVideo__play .button span:after {
-  content: "";
-  background-image: url("/wp-content/themes/clicane/images/btn_arrow.svg");
-  background-repeat: no-repeat;
-  background-size: 14px;
-  width: 14px;
-  height: 24px;
-  position: absolute;
-  right: 0;
-  top: 55%;
-  transform: translate(0, -50%);
-  transition: ease 0.3s;
-}
-.homeVideo__play .button:hover {
-  background-color: #f7c62f;
-}
-.homeVideo__play .button:hover span:after {
-  right: -8px;
+
+html[lang=pl-PL] .homeVideo__wrap .wp-video .mejs-overlay-button {
+  background-image: url("/wp-content/themes/clicane/images/button_play_pl.png");
 }
 
 @media (max-width: 1199px) {
   .homeVideo {
     margin: 50px 0 0;
   }
-  .homeVideo__play .button {
-    min-height: 80px;
-    padding: 0 40px;
-  }
-  .homeVideo__play .button span {
-    font-size: 30px;
-    padding-right: 40px;
-  }
-  .homeVideo__play .button span:after {
-    background-size: 16px;
-    width: 16px;
-    height: 28px;
-  }
 }
 @media (max-width: 991px) {
-  .homeVideo__play .button {
-    min-height: 65px;
-    padding: 0 35px;
-  }
-  .homeVideo__play .button span {
-    font-size: 25px;
-    padding-right: 32px;
-  }
-  .homeVideo__play .button span:after {
-    background-size: 13px;
-    width: 13px;
-    height: 22px;
+  .homeVideo__wrap .wp-video .mejs-overlay-button {
+    background-size: 180px;
+    width: 180px;
+    height: 60px;
   }
 }
 @media (max-width: 575px) {
@@ -646,19 +579,6 @@ body.admin-bar .homeHeader {
   }
   .homeVideo__wrap {
     max-width: 100%;
-  }
-  .homeVideo__play .button {
-    min-height: 45px;
-    padding: 0 20px;
-  }
-  .homeVideo__play .button span {
-    font-size: 20px;
-    padding-right: 25px;
-  }
-  .homeVideo__play .button span:after {
-    background-size: 10px;
-    width: 10px;
-    height: 17px;
   }
 }
 .homeText {
@@ -1378,6 +1298,64 @@ body.admin-bar .homeHeader {
 .homeContact__form .contactForm__row .input--textarea {
   height: 256px;
   resize: none;
+}
+.homeContact__form .contactForm__input--checkbox {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.homeContact__form .contactForm__input--checkbox .checkbox-trigger {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  margin: 2px 0 0;
+  position: relative;
+}
+.homeContact__form .contactForm__input--checkbox .checkbox-trigger:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #F2B705;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translate(0, -50%);
+  opacity: 0;
+}
+.homeContact__form .contactForm__input--checkbox .checkbox-trigger.active:after {
+  opacity: 1;
+}
+.homeContact__form .contactForm__input--checkbox input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  outline: none;
+  cursor: pointer;
+}
+.homeContact__form .contactForm__input--checkbox label {
+  max-width: calc(100% - 30px);
+  font-size: 14px;
+  line-height: 1.4;
+  color: #000;
+}
+.homeContact__form .contactForm__input--checkbox label a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: underline !important;
+  transition: ease 0.3s;
+  position: relative;
+  z-index: 3;
+}
+.homeContact__form .contactForm__input--checkbox label a:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 1199px) {
