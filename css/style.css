@@ -1074,7 +1074,9 @@ html[lang=pl-PL] .homeVideo__wrap .wp-video .mejs-overlay-button {
 }
 .homeClients__list .client img {
   padding: 0 24px;
-  max-height: 90px;
+  max-height: 70px;
+  width: 100%;
+  max-width: 228px;
 }
 
 @media (max-width: 1199px) {
