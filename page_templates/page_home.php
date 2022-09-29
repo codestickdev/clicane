@@ -35,7 +35,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="homeOffer" class="homeOffer">
+    <section id="homeOffer" class="offer">
         <div class="sectionHeading">
             <h2 class="sectionHeading__title"><?php echo get_field('homeOffer_title'); ?></h2>
             <p><?php echo get_field('homeOffer_lead'); ?></p>
@@ -88,7 +88,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="homePortfolio" class="homePortfolio">
+    <section id="homePortfolio" class="portfolio">
         <div class="homePortfolio__wrap container">
             <div class="sectionHeading">
                 <h2 class="sectionHeading__title">Portfolio</h2>
@@ -122,7 +122,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="homeClients" class="homeClients">
+    <section id="homeClients" class="clients">
         <div class="homeClients__wrap container">
             <div class="sectionHeading">
                 <h2 class="sectionHeading__title"><?php pll_e('Klienci'); ?></h2>
@@ -138,7 +138,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="homeAbout" class="homeAbout">
+    <section id="homeAbout" class="about">
         <div class="homeAbout__wrap">
             <div class="sectionHeading">
                 <h2 class="sectionHeading__title"><?php echo get_field('homeAbout_title'); ?></h2>
@@ -168,7 +168,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="homeContact" class="homeContact">
+    <section id="homeContact" class="contact">
         <div class="homeContact__wrap container">
             <div class="sectionHeading">
                 <h2 class="sectionHeading__title"><?php pll_e('Kontakt'); ?></h2>
