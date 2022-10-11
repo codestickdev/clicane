@@ -5,7 +5,15 @@
      */
       $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
-    
+        var origin = window.location.origin;
+        var section = $(this).attr('href');
+
+        if(section !== '#page'){
+            $(location).attr('href', origin + section);
+        }else{
+            window.history.pushState('clicane', 'Clicane - Prezentacje multimedialne', '/');
+        }
+
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top - 80
         }, 500);
