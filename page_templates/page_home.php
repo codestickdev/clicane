@@ -10,7 +10,7 @@ get_header(); ?>
             <div class="homeHeader__content">
                 <p class="hello"><?php pll_e('Cześć!') ?></p>
                 <h1><?php echo get_field('homeHeader_title'); ?></h1>
-                <a href="#homeContact" class="btn"><span><?php echo get_field('homeHeader_btn'); ?></span></a>
+                <a href="#contact" class="btn"><span><?php echo get_field('homeHeader_btn'); ?></span></a>
             </div>
             <div class="homeHeader__image">
                 <img src="<?php echo get_field('homeHeader_image')['url']; ?>" alt="<?php echo get_field('homeHeader_image')['alt']; ?>"/>
