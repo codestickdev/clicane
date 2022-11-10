@@ -764,10 +764,13 @@ html[lang="pl-PL"]{
                 }
                 &__logo{
                     width: inherit;
-                    display: block;
+                    display: flex;
+                    align-items: center;
+                    height: 80px;
                     margin: 0 0 25px;
 
                     img{
+                        width: 100%;
                         max-width: 180px;
                         max-height: 40px;
                     }
