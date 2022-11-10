@@ -29,10 +29,12 @@
 					<img src="<?php echo get_template_directory_uri() . '/images/icons/mail_ico.svg'; ?>"/>
 					<span>info@clicane.com</span>
 				</a>
-				<a href="tel:+48795757009" class="siteFooter__position">
+				<?php if(!get_field('footer_phone_hide')): ?>
+				<a href="tel:+48<?php echo get_field('footer_phone'); ?>" class="siteFooter__position">
 					<img src="<?php echo get_template_directory_uri() . '/images/icons/phone_ico.svg'; ?>"/>
-					<span>+48 795 757 009</span>
+					<span>+48 <?php echo get_field('footer_phone'); ?></span>
 				</a>
+				<?php endif; ?>
 			</div>
 			<div class="siteFooter__column siteFooter__column--desktop">
 				<h3><?php pll_e('odwiedź nas'); ?></h3>
@@ -46,9 +48,9 @@
 				</div>
 			</div>
 			<div class="siteFooter__column">
-				<a href="https://goo.gl/maps/jDxhNc4kN7eHXMbp9" target="_blank" class="siteFooter__position">
+				<a href="<?php echo get_field('footer_address_map'); ?>" target="_blank" class="siteFooter__position">
 					<img src="<?php echo get_template_directory_uri() . '/images/icons/marker_ico.svg'; ?>"/>
-					<span><?php pll_e('Konstruktorska 12a <br/>02-673 Warszawa <br/>Polska'); ?></span>
+					<span><?php echo get_field('footer_address'); ?></span>
 				</a>
 			</div>
 		</div>
