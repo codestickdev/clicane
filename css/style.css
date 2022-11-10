@@ -1036,7 +1036,7 @@ html[lang=pl-PL] .homeVideo__wrap .wp-video .mejs-overlay-button {
   .homePortfolio__list .realization__logo img {
     width: 100%;
     max-width: 180px;
-    max-height: 40px;
+    max-height: 80px;
   }
 }
 @media (max-width: 575px) {
