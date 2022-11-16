@@ -258,5 +258,5 @@ add_action('init', function() {
 	pll_register_string('clicane', 'wyślij');
 	pll_register_string('clicane', 'odwiedź nas');
 	pll_register_string('clicane', 'Konstruktorska 12a <br/>02-673 Warszawa <br/>Polska');
-	pll_register_string('clicane', 'Przyjmuję do wiadomości, że moje dane osobowe podane przeze mnie w formularzu kontaktowym są przetwarzane przez firmę Kamil Rasiński w celu udzielenia odpowiedzi na moje zapytanie, zgodnie z <a href="https://clicane.pl/wp-content/uploads/2022/09/Polityka-prywatności_Clicane.pdf" target="_blank">Polityką prywatności</a>.');
+	pll_register_string('clicane', 'Przyjmuję do wiadomości, że moje dane osobowe podane przeze mnie w formularzu kontaktowym są przetwarzane przez firmę Kamil Rasiński w celu udzielenia odpowiedzi na moje zapytanie, zgodnie z <a href="https://clicane.com/polityka-prywatnosci.pdf" target="_blank">Polityką prywatności</a>.');
 });
